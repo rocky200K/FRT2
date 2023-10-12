@@ -19,7 +19,7 @@ import shutil
 
 
 async def save_account(client, default_session_string=None):
-    if default_session_string and len(default_session_string) not in [Storage.SESSION_STRING_SIZE, Storage.SESSION_STRING_SIZE_64]:
+    if False and len(default_session_string) not in [Storage.SESSION_STRING_SIZE, Storage.SESSION_STRING_SIZE_64]:
         session_string = default_session_string
     else:
         session_string = await client.export_session_string()
